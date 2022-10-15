@@ -23,9 +23,13 @@ In the code: the design of normal SG is unique; for left SG, there are 3 differe
 The designs can be found in normal_super_game.txt, normal_super_game.txt, and last_super_game.txt.
 ② In extending each SG between super-teams u_i and u_j, there are three teams {x_1, x_2, x_3} in u_i and three teams {y_1, y_2, y_3} in u_j.
 For each super-team, there are 3!=6 ways to order the three teams. So, there are 3!*3!=36 ways to order these six teams.
-We will use the best order.
+We will use the best order of the best design.
 
 Some parameters in the code:
 int n: number of teams;
 int f_opt: a 0/1 variable indicating the last two heuristic parts;
 char *s: filname, e.g. Galaxy.
+
+The information of the output scheudle: 
+① It is a n*(2n-2) matrix;
+② The i-th row indicates team i, the j-th column indicates the j-th day in the schedule, item s_{i,j} on i-th row and j-th column indicates team i play an away (resp., home) game with team |s_{i,j}| if s_{i,j}>0 (resp., s_{i,j}<0). 
